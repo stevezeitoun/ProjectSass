@@ -1,0 +1,38 @@
+/* header pour la photo avec le gradient et la decoupe en bas de photo */
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)), 
+        url(../img/header-img.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh , 0 100%);
+
+    /* positionnement logo parent */
+&__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    
+}
+
+    /* style logo enfant */
+&__logo {
+    font-size: 5.5rem;
+    color: $color-white;
+}
+
+/* positionnement div texte et bouton parent */
+&__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+}
